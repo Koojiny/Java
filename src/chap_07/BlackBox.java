@@ -7,6 +7,10 @@ public class BlackBox {
     String color; // 색상
     static boolean canAutoReport = false; // 자동 신고 기능
 
+    BlackBox() {
+        System.out.println("기본 생성자 호출");
+    }
+
     // 자동 신고 기능 메소드를 만들어보자
     void autoReport() {
         if (canAutoReport) {
@@ -44,9 +48,16 @@ public class BlackBox {
         System.out.println("영상은 " + min + "분 단위로 기록됩니다.");
     }
 
-    void record() {
+    void record() { // 인스턴 메소드 : 객체가 만들어져야 객체로 접근할 수 있는 메소드, 각 객체마다 서로 다른 동작을 하게 된다
         record(true, true, 5);
     }
 
+    static void callServiceCenter() { // 클래스 메소드 : static 키워드가 붙음. 객체가 만들어지지 않고도 (클래스이름.메소드이름) 으로 바로 접근이 가능하다
+//        modelName = "test"; // 인스턴스 변수는 객체가 만들어져야 만들어지는 인스턴스 변수이기 때문에 static class method 내에서는 직접 접근이 불가
+        canAutoReport = false;
+    }
 
+    void appendModelName(String modelName) {
+        this.modelName += modelName;
+    }
 }
