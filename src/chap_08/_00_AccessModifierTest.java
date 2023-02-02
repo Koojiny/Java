@@ -1,6 +1,7 @@
 package chap_08;
 
-import chap_07.BlackBoxRefurbish;
+import chap_07.*;
+//import chap_07.BlackBoxRefurbish;
 
 public class _00_AccessModifierTest {
     public static void main(String[] args) {
@@ -9,5 +10,7 @@ public class _00_AccessModifierTest {
         // b1.resolution = "FHD"; // default : 같은 패키지 내에서만 접근 가능
         // b1.price = 200000; // private : 해당 클래스 내에서만 접근 가능
         // b1.color  = "블랙"; // protected
+
+        BlackBox b2;
     }
 }
