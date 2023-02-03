@@ -1,5 +1,6 @@
 package chap_07.camera;
 
+// FactoryCam is a Camera.
 public class FactoryCam extends Camera { // 자식 클래스
 
     public FactoryCam() {
