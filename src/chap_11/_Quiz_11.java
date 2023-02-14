@@ -2,7 +2,7 @@ package chap_11;
 
 public class _Quiz_11 {
     public static void main(String[] args) {
-        int errorCode = 1;
+        int errorCode = 2;
         try {
             if (errorCode == 1) {
                 throw new TimeOutException("상품 구매 가능 시간이 아닙니다.");
